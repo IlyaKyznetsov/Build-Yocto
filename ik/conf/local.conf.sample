@@ -1,0 +1,96 @@
+SDKMACHINE ?= "x86_64"
+MACHINE ??= "imx53qsb"
+DISTRO ?= "poky"
+PACKAGE_CLASSES ?= "package_rpm"
+USER_CLASSES ?= "buildstats image-mklibs image-prelink"
+PATCHRESOLVE = "noop"
+
+DL_DIR = "/home/build/download-warrior"
+
+#
+# Disk Space Monitoring during the build
+#
+# Monitor the disk space during the build. If there is less that 1GB of space or less
+# than 100K inodes in any key build location (TMPDIR, DL_DIR, SSTATE_DIR), gracefully
+# shutdown the build. If there is less that 100MB or 1K inodes, perform a hard abort
+# of the build. The reason for this is that running completely out of space can corrupt
+# files and damages the build in ways which may not be easily recoverable.
+# It's necesary to monitor /tmp, if there is no space left the build will fail
+# with very exotic errors.
+BB_DISKMON_DIRS ??= "\
+    STOPTASKS,${TMPDIR},1G,100K \
+    STOPTASKS,${DL_DIR},1G,100K \
+    STOPTASKS,${SSTATE_DIR},1G,100K \
+    STOPTASKS,/tmp,100M,100K \
+    ABORT,${TMPDIR},100M,1K \
+    ABORT,${DL_DIR},100M,1K \
+    ABORT,${SSTATE_DIR},100M,1K \
+    ABORT,/tmp,10M,1K"
+    
+CONF_VERSION = "1"
+
+BB_NUMBER_THREADS = "4"
+PARALLEL_MAKE = "-j 4"
+ACCEPT_FSL_EULA = "1"
+
+# Build mode
+BUILD_DEBUG="0"
+# Optimization mode
+FULL_OPTIMIZATION = "-O2 -pipe ${DEBUG_FLAGS}"
+DEBUG_OPTIMIZATION = "-O -fno-omit-frame-pointer ${DEBUG_FLAGS} -pipe"
+SELECTED_OPTIMIZATION = "${@d.getVar(['FULL_OPTIMIZATION', 'DEBUG_OPTIMIZATION'][d.getVar('DEBUG_BUILD') == '1'])}"
+#LDFLAGS =+ "-pg"
+# ---------------------------------------------------------------
+
+# Disable sdl
+PACKAGECONFIG_remove_pn-qemu-native = " sdl"
+PACKAGECONFIG_remove_pn-nativesdk-qemu = " sdl"
+# ---------------------------------------------------------------
+
+PREFERRED_PROVIDER_u-boot-fw-utils = "u-boot-fw-utils"
+
+# Distribution configuration
+DISTRO_FEATURES_remove=" sysvinit linuxfb wayland vulkan directfb bluetooth bluez5 irda pcmcia smbfs ptest wifi 3g"
+# Locale configuration
+DISTRO_FEATURES_LIBC_append=" libc-locales libc-locale-code"
+DISTRO_FEATURES_append=" ${DISTRO_FEATURES_LIBC}"
+GLIBC_GENERATE_LOCALES = "en_US.UTF-8 ru_RU.UTF-8"
+IMAGE_LINGUAS = "en-us ru-ru"
+ENABLE_BINARY_LOCALE_GENERATION = "1"
+DISTRO_FEATURES_append=" udev gstreamer1 pulseaudio systemd "
+# Choose graphic environment:
+DISTRO_FEATURES_append = " opengl x11"
+DISTRO_FEATURES_append = " glib xcb xinput2 xkb xkbcommon-evdev"
+# ---------------------------------------------------------------
+
+# Use systemd for system initialization
+DISTRO_FEATURES_append = " systemd"
+DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+VIRTUAL-RUNTIME_login_manager = "shadow-base"
+VIRTUAL-RUNTIME_init_manager = "systemd"
+VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
+
+# Replace busybox
+PREFERRED_PROVIDER_virtual/base-utils = "coreutils"
+VIRTUAL-RUNTIME_base-utils = "coreutils"
+VIRTUAL-RUNTIME_base-utils-hwclock = "util-linux-hwclock"
+VIRTUAL-RUNTIME_base-utils-syslog = ""
+
+# ModemManager
+PACKAGECONFIG_pn-modemmanager_append=" mbim qmi systemd"
+# NetworkManager
+PACKAGECONFIG_pn-networkmanager_append=" netconfig ifupdown modemmanager ppp nss dnsmasq dhclient systemd"
+
+# Qt in distribution configuration
+PACKAGECONFIG_pn-qtbase_append=" release optimize-size linuxfb gl gles2 widgets udev evdev mtdev sql-sqlite icu freetype fontconfig zlib openssl libpng xcb xkb xkbcommon-evdev"
+PACKAGECONFIG_pn-qtbase_append=" journald libinput dbus"
+#PACKAGECONFIG_pn-qtbase_append=" cups tslib"
+PACKAGECONFIG_pn-qtmultimedia_append = " gstreamer pulseaudio"
+# ---------------------------------------------------------------
+
+# Proftpd in distribution configuration
+PACKAGECONFIG_pn-proftpd_append = " nls ipv6 openssl shadow largefile getopt auth pcre ctrls acl sendfile ctrls dso"
+# ---------------------------------------------------------------
+
+#KERNEL_IMAGETYPE = "uImage"
+#KERNEL_IMAGETYPE = "zImage"
