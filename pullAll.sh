@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-BRANCH='warrior'
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+echo "--- $BRANCH ---"
 for item in *; do
     if [ -d $item ]; then
         echo $item
