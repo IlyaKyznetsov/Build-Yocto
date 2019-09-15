@@ -8,7 +8,9 @@ BBFILES ?= ""
 LAYERS_PATH = "/home/build/layers"
 
 BBLAYERS ?= " \
-  ${LAYERS_PATH}/poky \
+  ${LAYERS_PATH}/poky/meta \
+  ${LAYERS_PATH}/poky/meta-poky \
+  ${LAYERS_PATH}/poky/meta-yocto-bsp \
   ${LAYERS_PATH}/meta-openembedded/meta-oe \
   ${LAYERS_PATH}/meta-openembedded/meta-python \
   ${LAYERS_PATH}/meta-openembedded/meta-initramfs \
