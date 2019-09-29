@@ -1,0 +1,114 @@
+Build options:
+  Mode ................................... release
+  Optimize release build for size ........ yes
+  Building shared libraries .............. yes
+  Using C++ standard ..................... C++1z
+  Using ccache ........................... no
+  Using gold linker ...................... no
+  Using new DTAGS ........................ yes
+  Using precompiled headers .............. no
+  Using LTCG ............................. no
+  Target compiler supports:
+    SSE .................................. SSE2 SSE3 SSSE3 SSE4.1 SSE4.2
+    AVX .................................. AVX AVX2
+    AVX512 ............................... F ER CD PF DQ BW VL IFMA VBMI
+    Other x86 ............................ AES F16C RDRAND SHA
+  Build parts ............................ libs
+Qt modules and options:
+  Qt Concurrent .......................... yes
+  Qt D-Bus ............................... yes
+  Qt D-Bus directly linked to libdbus .... yes
+  Qt Gui ................................. yes
+  Qt Network ............................. yes
+  Qt Sql ................................. yes
+  Qt Testlib ............................. yes
+  Qt Widgets ............................. yes
+  Qt Xml ................................. yes
+Support enabled for:
+  Using pkg-config ....................... yes
+  QML debugging .......................... no
+  udev ................................... yes
+  Using system zlib ...................... yes
+Qt Core:
+  DoubleConversion ....................... yes
+    Using system DoubleConversion ........ no
+  GLib ................................... yes
+  iconv .................................. yes
+  ICU .................................... no
+  Logging backends:
+    journald ............................. no
+    syslog ............................... no
+    slog2 ................................ no
+  Using system PCRE2 ..................... yes
+Qt Network:
+  getifaddrs() ........................... yes
+  IPv6 ifname ............................ yes
+  libproxy ............................... no
+  OpenSSL ................................ yes
+    Qt directly linked to OpenSSL ........ no
+  SCTP ................................... no
+  Use system proxies ..................... yes
+Qt Gui:
+  Accessibility .......................... no
+  FreeType ............................... yes
+    Using system FreeType ................ yes
+  HarfBuzz ............................... yes
+    Using system HarfBuzz ................ yes
+  Fontconfig ............................. yes
+  Image formats:
+    GIF .................................. yes
+    ICO .................................. no
+    JPEG ................................. no
+      Using system libjpeg ............... no
+    PNG .................................. yes
+      Using system libpng ................ yes
+  EGL .................................... yes
+  OpenVG ................................. no
+  OpenGL:
+    Desktop OpenGL ....................... no
+    OpenGL ES 2.0 ........................ yes
+    OpenGL ES 3.0 ........................ yes
+    OpenGL ES 3.1 ........................ yes
+    OpenGL ES 3.2 ........................ yes
+  Vulkan ................................. no
+  Session Management ..................... no
+Features used by QPA backends:
+  evdev .................................. yes
+  libinput ............................... no
+  INTEGRITY HID .......................... no
+  mtdev .................................. no
+  tslib .................................. no
+  xkbcommon-evdev ........................ yes
+QPA backends:
+  DirectFB ............................... no
+  EGLFS .................................. no
+  LinuxFB ................................ no
+  VNC .................................... yes
+  Mir client ............................. no
+  X11:
+    Using system-provided XCB libraries .. yes
+    EGL on X11 ........................... yes
+    Xinput2 .............................. yes
+    XCB XKB .............................. yes
+    XLib ................................. yes
+    XCB render ........................... yes
+    XCB GLX .............................. yes
+    XCB Xlib ............................. yes
+    Using system-provided xkbcommon ...... yes
+    Native painting (experimental) ....... yes
+Qt Widgets:
+  GTK+ ................................... no
+  Styles ................................. Fusion Windows
+Qt PrintSupport:
+  CUPS ................................... no
+Qt Sql:
+  DB2 (IBM) .............................. no
+  InterBase .............................. no
+  MySql .................................. no
+  OCI (Oracle) ........................... no
+  ODBC ................................... no
+  PostgreSQL ............................. no
+  SQLite2 ................................ no
+  SQLite ................................. yes
+    Using system provided SQLite ......... yes
+  TDS (Sybase) ........................... no

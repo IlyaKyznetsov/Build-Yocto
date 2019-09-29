@@ -1,0 +1,492 @@
+--- Starting bitbake server pid 22630 at 2019-09-29 11:39:53.468583 ---
+Started bitbake server pid 22630
+DEBUG: BBCooker starting 1569757193.4696584
+DEBUG: BBCooker pyinotify1 1569757193.4731858
+DEBUG: BBCooker pyinotify2 1569757193.4736404
+DEBUG: BBCooker pyinotify3 1569757193.4765196
+DEBUG: BBCooker pyinotify complete 1569757193.4766533
+DEBUG: Found bblayers.conf (/home/build/build-x86_64-core-image-ik-x11/conf/bblayers.conf)
+DEBUG: Adding layer /home/build/layers/internet/poky/meta
+DEBUG: Adding layer /home/build/layers/internet/poky/meta-poky
+DEBUG: Adding layer /home/build/layers/internet/poky/meta-yocto-bsp
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-python
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-networking
+DEBUG: Adding layer /home/build/layers/internet/meta-qt5
+DEBUG: Adding layer /home/build/layers/internet/meta-freescale
+DEBUG: Adding layer /home/build/layers/custom/meta-ik
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:751: including conf/machine/qemux86-64.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:10: including conf/machine/include/qemu.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:12: including conf/machine/include/tune-core2.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-core2.inc:12: including conf/machine/include/tune-i686.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-i686.inc:16: including conf/machine/include/tune-i586.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-i586.inc:3: including conf/machine/include/x86/arch-x86.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:13: including conf/machine/include/qemuboot-x86.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:753: including conf/distro/poky.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+Entering server connection loop
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/patch.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/terminal.bbclass (from /home/build/layers/internet/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/staging.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/mirrors.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/utils.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/utility-tasks.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/metadata_scm.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/logging.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/package_ipk.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/package.bbclass (from /home/build/layers/internet/poky/meta/classes/package_ipk.bbclass:1)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/packagedata.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/chrpath.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/insane.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/linuxloader.bbclass (from /home/build/layers/internet/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/build/build-x86_64-core-image-ik-x11/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/build/build-x86_64-core-image-ik-x11/cache/bb_codeparser.dat'
+DEBUG: BBCooker parsed base configuration 1569757193.6450045
+DEBUG: BBCooker startup complete 1569757193.6451514
+Accepting [<socket.socket fd=8, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>] ([])
+Processing Client
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'abort': True, 'force': False, 'extra_assume_provided': [], 'debug': 0, 'dump_signatures': [], 'dry_run': False, 'profile': False, 'verbose': True, 'prefile': [], 'invalidate_stamp': None, 'postfile': [], 'server_timeout': None, 'debug_domains': []}, {'PWD': '/home/build/build-x86_64-core-image-ik-x11/conf', 'PYTHONNOUSERSITE': '1', 'TERMINFO_DIRS': '/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin/../../etc/terminfo:/etc/terminfo:/usr/share/terminfo:/usr/share/misc/terminfo:/lib/terminfo', 'BBPATH': '/home/build/build-x86_64-core-image-ik-x11', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'LC_ALL': 'en_US.UTF-8', 'MC_SID': '22596', 'HOME': '/home/build', 'MC_TMPDIR': '/tmp/mc-build', 'TERM': 'xterm', 'GIT_SSL_CAINFO': '/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/etc/ssl/certs/ca-certificates.crt', 'HISTCONTROL': 'ignorespace', 'PROJECT': 'build', 'HOSTNAME': 'cb3e6d8f4f38', 'LANG': 'en_US.UTF-8', 'SHLVL': '2', 'BUILDDIR': '/home/build/build-x86_64-core-image-ik-x11', 'PATH': '/home/build/layers/internet/poky/scripts:/home/build/layers/internet/poky/bitbake/bin:/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin:/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'}, ['/home/build/layers/internet/poky/bitbake/bin/bitbake', 'core-image-ik-x11', '-v']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 19, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['core-image-ik-x11'], 'build']
+Running command ['stateShutdown']
+Processing Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 22668 at 2019-09-29 11:40:10.457837 ---
+Started bitbake server pid 22668
+DEBUG: BBCooker starting 1569757210.4589493
+DEBUG: BBCooker pyinotify1 1569757210.4621437
+DEBUG: BBCooker pyinotify2 1569757210.4625666
+DEBUG: BBCooker pyinotify3 1569757210.4651735
+DEBUG: BBCooker pyinotify complete 1569757210.4653392
+DEBUG: Found bblayers.conf (/home/build/build-x86_64-core-image-ik-x11/conf/bblayers.conf)
+DEBUG: Adding layer /home/build/layers/internet/poky/meta
+DEBUG: Adding layer /home/build/layers/internet/poky/meta-poky
+DEBUG: Adding layer /home/build/layers/internet/poky/meta-yocto-bsp
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-python
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-networking
+DEBUG: Adding layer /home/build/layers/internet/meta-qt5
+DEBUG: Adding layer /home/build/layers/internet/meta-freescale
+DEBUG: Adding layer /home/build/layers/custom/meta-ik
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:751: including conf/machine/qemux86-64.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:10: including conf/machine/include/qemu.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:12: including conf/machine/include/tune-core2.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-core2.inc:12: including conf/machine/include/tune-i686.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-i686.inc:16: including conf/machine/include/tune-i586.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-i586.inc:3: including conf/machine/include/x86/arch-x86.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:13: including conf/machine/include/qemuboot-x86.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:753: including conf/distro/poky.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/patch.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/terminal.bbclass (from /home/build/layers/internet/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/staging.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/mirrors.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/utils.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/utility-tasks.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/metadata_scm.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/logging.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/package_ipk.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/package.bbclass (from /home/build/layers/internet/poky/meta/classes/package_ipk.bbclass:1)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/packagedata.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/chrpath.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/insane.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/linuxloader.bbclass (from /home/build/layers/internet/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/build/build-x86_64-core-image-ik-x11/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/build/build-x86_64-core-image-ik-x11/cache/bb_codeparser.dat'
+DEBUG: BBCooker parsed base configuration 1569757210.6225526
+DEBUG: BBCooker startup complete 1569757210.6226969
+Entering server connection loop
+Accepting [<socket.socket fd=8, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>] ([])
+Processing Client
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'server_timeout': None, 'dry_run': False, 'debug_domains': [], 'invalidate_stamp': None, 'debug': 0, 'abort': True, 'prefile': [], 'postfile': [], 'extra_assume_provided': [], 'verbose': True, 'force': False, 'dump_signatures': [], 'profile': False}, {'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'PYTHONNOUSERSITE': '1', 'HISTCONTROL': 'ignorespace', 'MC_TMPDIR': '/tmp/mc-build', 'GIT_SSL_CAINFO': '/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/etc/ssl/certs/ca-certificates.crt', 'TERM': 'xterm', 'HOME': '/home/build', 'PWD': '/home/build/build-x86_64-core-image-ik-x11/conf', 'HOSTNAME': 'cb3e6d8f4f38', 'PROJECT': 'build', 'LANG': 'en_US.UTF-8', 'PATH': '/home/build/layers/internet/poky/scripts:/home/build/layers/internet/poky/bitbake/bin:/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin:/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'MC_SID': '22596', 'BBPATH': '/home/build/build-x86_64-core-image-ik-x11', 'TERMINFO_DIRS': '/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin/../../etc/terminfo:/etc/terminfo:/usr/share/terminfo:/usr/share/misc/terminfo:/lib/terminfo', 'LC_ALL': 'en_US.UTF-8', 'SHLVL': '2', 'BUILDDIR': '/home/build/build-x86_64-core-image-ik-x11'}, ['/home/build/layers/internet/poky/bitbake/bin/bitbake', 'core-image-ik-x11', '-v']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 19, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['core-image-ik-x11'], 'build']
+Running command ['stateShutdown']
+Processing Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 22692 at 2019-09-29 11:40:29.013665 ---
+Started bitbake server pid 22692
+DEBUG: BBCooker starting 1569757229.0147433
+DEBUG: BBCooker pyinotify1 1569757229.0186598
+DEBUG: BBCooker pyinotify2 1569757229.0191171
+DEBUG: BBCooker pyinotify3 1569757229.0219665
+DEBUG: BBCooker pyinotify complete 1569757229.0221052
+DEBUG: Found bblayers.conf (/home/build/build-x86_64-core-image-ik-x11/conf/bblayers.conf)
+DEBUG: Adding layer /home/build/layers/internet/poky/meta
+DEBUG: Adding layer /home/build/layers/internet/poky/meta-poky
+DEBUG: Adding layer /home/build/layers/internet/poky/meta-yocto-bsp
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-python
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-networking
+DEBUG: Adding layer /home/build/layers/internet/meta-qt5
+DEBUG: Adding layer /home/build/layers/internet/meta-freescale
+DEBUG: Adding layer /home/build/layers/custom/meta-ik
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:751: including conf/machine/qemux86-64.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:10: including conf/machine/include/qemu.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:12: including conf/machine/include/tune-core2.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-core2.inc:12: including conf/machine/include/tune-i686.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-i686.inc:16: including conf/machine/include/tune-i586.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-i586.inc:3: including conf/machine/include/x86/arch-x86.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:13: including conf/machine/include/qemuboot-x86.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:753: including conf/distro/poky.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+Entering server connection loop
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/patch.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/terminal.bbclass (from /home/build/layers/internet/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/staging.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/mirrors.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/utils.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/utility-tasks.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/metadata_scm.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/logging.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/package_ipk.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/package.bbclass (from /home/build/layers/internet/poky/meta/classes/package_ipk.bbclass:1)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/packagedata.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/chrpath.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/insane.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/linuxloader.bbclass (from /home/build/layers/internet/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/build/build-x86_64-core-image-ik-x11/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/build/build-x86_64-core-image-ik-x11/cache/bb_codeparser.dat'
+DEBUG: BBCooker parsed base configuration 1569757229.1802194
+DEBUG: BBCooker startup complete 1569757229.1803696
+Accepting [<socket.socket fd=8, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>] ([])
+Processing Client
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'postfile': [], 'debug': 0, 'dry_run': False, 'force': False, 'verbose': False, 'abort': True, 'profile': False, 'server_timeout': None, 'prefile': [], 'invalidate_stamp': None, 'debug_domains': [], 'extra_assume_provided': [], 'dump_signatures': []}, {'PWD': '/home/build/build-x86_64-core-image-ik-x11/conf', 'PROJECT': 'build', 'PATH': '/home/build/layers/internet/poky/scripts:/home/build/layers/internet/poky/bitbake/bin:/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin:/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'HISTCONTROL': 'ignorespace', 'HOME': '/home/build', 'SHLVL': '2', 'GIT_SSL_CAINFO': '/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/etc/ssl/certs/ca-certificates.crt', 'LC_ALL': 'en_US.UTF-8', 'TERMINFO_DIRS': '/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin/../../etc/terminfo:/etc/terminfo:/usr/share/terminfo:/usr/share/misc/terminfo:/lib/terminfo', 'BBPATH': '/home/build/build-x86_64-core-image-ik-x11', 'PYTHONNOUSERSITE': '1', 'TERM': 'xterm', 'MC_SID': '22596', 'MC_TMPDIR': '/tmp/mc-build', 'BUILDDIR': '/home/build/build-x86_64-core-image-ik-x11', 'HOSTNAME': 'cb3e6d8f4f38', 'LANG': 'en_US.UTF-8'}, ['/home/build/layers/internet/poky/bitbake/bin/bitbake', 'core-image-ik-x11', '-g']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['generateDotGraph', ['core-image-ik-x11'], 'build']
+Processing Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 22754 at 2019-09-29 11:41:42.482214 ---
+Started bitbake server pid 22754
+DEBUG: BBCooker starting 1569757302.4833233
+DEBUG: BBCooker pyinotify1 1569757302.4865768
+DEBUG: BBCooker pyinotify2 1569757302.486975
+DEBUG: BBCooker pyinotify3 1569757302.4896433
+DEBUG: BBCooker pyinotify complete 1569757302.4897852
+DEBUG: Found bblayers.conf (/home/build/build-x86_64-core-image-ik-x11/conf/bblayers.conf)
+DEBUG: Adding layer /home/build/layers/internet/poky/meta
+DEBUG: Adding layer /home/build/layers/internet/poky/meta-poky
+DEBUG: Adding layer /home/build/layers/internet/poky/meta-yocto-bsp
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-python
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-networking
+DEBUG: Adding layer /home/build/layers/internet/meta-qt5
+DEBUG: Adding layer /home/build/layers/internet/meta-freescale
+DEBUG: Adding layer /home/build/layers/custom/meta-ik
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:751: including conf/machine/qemux86-64.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:10: including conf/machine/include/qemu.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:12: including conf/machine/include/tune-core2.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-core2.inc:12: including conf/machine/include/tune-i686.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-i686.inc:16: including conf/machine/include/tune-i586.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-i586.inc:3: including conf/machine/include/x86/arch-x86.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:13: including conf/machine/include/qemuboot-x86.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:753: including conf/distro/poky.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/patch.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/terminal.bbclass (from /home/build/layers/internet/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/staging.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/mirrors.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/utils.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/utility-tasks.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/metadata_scm.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/logging.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/package_ipk.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/package.bbclass (from /home/build/layers/internet/poky/meta/classes/package_ipk.bbclass:1)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/packagedata.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/chrpath.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/insane.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/linuxloader.bbclass (from /home/build/layers/internet/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/build/build-x86_64-core-image-ik-x11/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/build/build-x86_64-core-image-ik-x11/cache/bb_codeparser.dat'
+DEBUG: BBCooker parsed base configuration 1569757302.6759388
+DEBUG: BBCooker startup complete 1569757302.67606
+Entering server connection loop
+Accepting [<socket.socket fd=8, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>] ([])
+Processing Client
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'profile': False, 'dump_signatures': [], 'server_timeout': None, 'extra_assume_provided': [], 'debug_domains': [], 'debug': 0, 'prefile': [], 'verbose': False, 'invalidate_stamp': None, 'abort': True, 'dry_run': False, 'postfile': [], 'force': False}, {'SHLVL': '2', 'HOSTNAME': 'cb3e6d8f4f38', 'TERM': 'xterm', 'HOME': '/home/build', 'BBPATH': '/home/build/build-x86_64-core-image-ik-x11', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'GIT_SSL_CAINFO': '/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/etc/ssl/certs/ca-certificates.crt', 'LANG': 'en_US.UTF-8', 'MC_SID': '22596', 'BUILDDIR': '/home/build/build-x86_64-core-image-ik-x11', 'LC_ALL': 'en_US.UTF-8', 'MC_TMPDIR': '/tmp/mc-build', 'PWD': '/home/build/build-x86_64-core-image-ik-x11/conf', 'PATH': '/home/build/layers/internet/poky/scripts:/home/build/layers/internet/poky/bitbake/bin:/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin:/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'TERMINFO_DIRS': '/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin/../../etc/terminfo:/etc/terminfo:/usr/share/terminfo:/usr/share/misc/terminfo:/lib/terminfo', 'HISTCONTROL': 'ignorespace', 'PYTHONNOUSERSITE': '1', 'PROJECT': 'build'}, ['/home/build/layers/internet/poky/bitbake/bin/bitbake', 'core-image-ik-x11', '-e']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['showEnvironmentTarget', ['core-image-ik-x11']]
+Processing Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 22781 at 2019-09-29 11:42:09.526065 ---
+Started bitbake server pid 22781
+DEBUG: BBCooker starting 1569757329.5271323
+DEBUG: BBCooker pyinotify1 1569757329.530452
+DEBUG: BBCooker pyinotify2 1569757329.5308547
+DEBUG: BBCooker pyinotify3 1569757329.53339
+DEBUG: BBCooker pyinotify complete 1569757329.5335121
+DEBUG: Found bblayers.conf (/home/build/build-x86_64-core-image-ik-x11/conf/bblayers.conf)
+DEBUG: Adding layer /home/build/layers/internet/poky/meta
+DEBUG: Adding layer /home/build/layers/internet/poky/meta-poky
+DEBUG: Adding layer /home/build/layers/internet/poky/meta-yocto-bsp
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-oe
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-python
+DEBUG: Adding layer /home/build/layers/internet/meta-openembedded/meta-networking
+DEBUG: Adding layer /home/build/layers/internet/meta-qt5
+DEBUG: Adding layer /home/build/layers/internet/meta-freescale
+DEBUG: Adding layer /home/build/layers/custom/meta-ik
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:751: including conf/machine/qemux86-64.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:10: including conf/machine/include/qemu.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:12: including conf/machine/include/tune-core2.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-core2.inc:12: including conf/machine/include/tune-i686.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-i686.inc:16: including conf/machine/include/tune-i586.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/include/tune-i586.inc:3: including conf/machine/include/x86/arch-x86.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/machine/qemux86-64.conf:13: including conf/machine/include/qemuboot-x86.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:753: including conf/distro/poky.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+Entering server connection loop
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /home/build/layers/internet/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/patch.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/terminal.bbclass (from /home/build/layers/internet/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/staging.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/mirrors.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/utils.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/utility-tasks.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/metadata_scm.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/logging.bbclass (from /home/build/layers/internet/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/package_ipk.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/package.bbclass (from /home/build/layers/internet/poky/meta/classes/package_ipk.bbclass:1)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/packagedata.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/chrpath.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/insane.bbclass (from /home/build/layers/internet/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/linuxloader.bbclass (from /home/build/layers/internet/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /home/build/layers/internet/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/build/build-x86_64-core-image-ik-x11/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/build/build-x86_64-core-image-ik-x11/cache/bb_codeparser.dat'
+DEBUG: BBCooker parsed base configuration 1569757329.71889
+DEBUG: BBCooker startup complete 1569757329.7190175
+Accepting [<socket.socket fd=8, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>] ([])
+Processing Client
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'extra_assume_provided': [], 'dry_run': False, 'force': False, 'verbose': False, 'prefile': [], 'dump_signatures': [], 'server_timeout': None, 'invalidate_stamp': None, 'profile': False, 'debug': 0, 'debug_domains': [], 'postfile': [], 'abort': True}, {'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'BBPATH': '/home/build/build-x86_64-core-image-ik-x11', 'GIT_SSL_CAINFO': '/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/etc/ssl/certs/ca-certificates.crt', 'HOSTNAME': 'cb3e6d8f4f38', 'SHLVL': '2', 'MC_SID': '22596', 'BUILDDIR': '/home/build/build-x86_64-core-image-ik-x11', 'TERM': 'xterm', 'LANG': 'en_US.UTF-8', 'LC_ALL': 'en_US.UTF-8', 'TERMINFO_DIRS': '/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin/../../etc/terminfo:/etc/terminfo:/usr/share/terminfo:/usr/share/misc/terminfo:/lib/terminfo', 'MC_TMPDIR': '/tmp/mc-build', 'HOME': '/home/build', 'PATH': '/home/build/layers/internet/poky/scripts:/home/build/layers/internet/poky/bitbake/bin:/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin:/home/build/opt/poky/2.5.3/sysroots/x86_64-pokysdk-linux/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'PYTHONNOUSERSITE': '1', 'HISTCONTROL': 'ignorespace', 'PWD': '/home/build/build-x86_64-core-image-ik-x11/conf', 'PROJECT': 'build'}, ['/home/build/layers/internet/poky/bitbake/bin/bitbake', 'core-image-ik-x11', 'c']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['core-image-ik-x11', 'c'], 'build']
+Processing Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
