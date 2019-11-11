@@ -1,0 +1,18 @@
+gunzip -f core-image-qt-imx53qsb.rootfs.wic.gz
+
+udisksctl loop-setup -f core-image-qt-imx53qsb.rootfs.wic
+
+lsblk
+
+dd if=/dev/loop0p2 bs=1M iflag=fullblock oflag=direct conv=fsync status=progress of=core-image-qt-full-cmdline-imx53qsb-2.5.1.rootfs.ext4
+
+udisksctl loop-delete -b /dev/loop0
+
+mount -o ro core-image-qt-full-cmdline-imx53qsb-2.5.1.rootfs.ext4 /media/
+
+cd /media
+
+tar -czvf ~/core-image-qt-full-cmdline-imx53qsb-2.5.1.rootfs.tar.gz ./
+
+umount /media
+
