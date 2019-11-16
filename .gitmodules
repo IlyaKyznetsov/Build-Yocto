@@ -1,0 +1,12 @@
+[submodule "ubuntu-yocto-build-16.04/layers/internet/meta-freescale"]
+	path = ubuntu-yocto-build-16.04/layers/internet/meta-freescale
+	url = https://git.yoctoproject.org/git/meta-freescale
+[submodule "ubuntu-yocto-build-16.04/layers/internet/meta-openembedded"]
+	path = ubuntu-yocto-build-16.04/layers/internet/meta-openembedded
+	url = git://git.openembedded.org/meta-openembedded
+[submodule "ubuntu-yocto-build-16.04/layers/internet/meta-qt5"]
+	path = ubuntu-yocto-build-16.04/layers/internet/meta-qt5
+	url = git://github.com/meta-qt5/meta-qt5.git
+[submodule "ubuntu-yocto-build-16.04/layers/internet/poky"]
+	path = ubuntu-yocto-build-16.04/layers/internet/poky
+	url = git://git.yoctoproject.org/poky
