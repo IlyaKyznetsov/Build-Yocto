@@ -1,4 +1,6 @@
-/downloads-sumo/
-/.cache/
-/.config/
-/.local/
+downloads-*
+.cache
+.config
+.local
+.*
+x86_64*
