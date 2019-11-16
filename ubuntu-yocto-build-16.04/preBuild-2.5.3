@@ -23,7 +23,8 @@ for item in *; do
             echo "--- Configuration: ${name} ---"
             echo "cp -fv ${PWD}/${name}-bblayers.conf ${BUILD_DIR}/conf/bblayers.conf"
             echo "cp -fv ${PWD}/${name}-local.conf ${BUILD_DIR}/conf/local.conf"
-            echo "bitbake -c build virtual/kernel && bitbake $name && bitbake $name -c populate_sdk"
+            echo "bitbake -c build virtual/kernel"
+            echo "bitbake $name && bitbake $name -c populate_sdk"
         fi
     fi
 done
