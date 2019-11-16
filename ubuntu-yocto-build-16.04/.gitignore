@@ -5,3 +5,4 @@
 /x86_64*
 /.python-history
 /.wget-hsts
+*.bash_history
