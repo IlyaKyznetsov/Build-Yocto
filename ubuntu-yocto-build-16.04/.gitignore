@@ -2,5 +2,4 @@ downloads-*
 .cache
 .config
 .local
-.*
 x86_64*
