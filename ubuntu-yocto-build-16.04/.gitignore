@@ -1,5 +1,7 @@
-downloads-*
-.cache
-.config
-.local
-x86_64*
+/downloads-*
+/.cache
+/.config
+/.local
+/x86_64*
+/.python-history
+/.wget-hsts
