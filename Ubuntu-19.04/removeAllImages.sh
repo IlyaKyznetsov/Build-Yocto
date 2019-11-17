@@ -1,6 +1,6 @@
 #!/bin/bash
 BIN='docker'
-BIN='podman'
+#BIN='podman'
 # Stop all containers
 ${BIN} stop $(${BIN} ps -aq)
 # Delete all containers
