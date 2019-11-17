@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+POKY_SDK_PATH='/home/build/opt/poky/3.0'
+CURRENT_DIR="$(dirname $(readlink -f $0))"
+RECIPES_DIR="$HOME/layers/custom/meta-ik/recipes-images"
+
+if [ 1 -ne $# ]; then
+        echo 'Need build dir name'
+        exit 0
+fi
+
+BUILD_DIR="${CURRENT_DIR}/${1}"
+echo "--- Prepare build workspace ---"
+echo "source $POKY_SDK_PATH/environment-setup-x86_64-pokysdk-linux"
+echo "source /home/build/layers/internet/poky/oe-init-build-env ${1}"
+
+cd "${RECIPES_DIR}"
+for item in *; do
+    if [ -f $item ]; then
+        name=${item%.*}
+        extension=${item##*.}
+        if [[ 'bb' == $extension  ]]; then
+            echo ""
+            echo "--- Configuration: ${name} ---"
+            echo "cp -fv ${PWD}/${name}-bblayers.conf ${BUILD_DIR}/conf/bblayers.conf"
+            echo "cp -fv ${PWD}/${name}-local.conf ${BUILD_DIR}/conf/local.conf"
+            echo "bitbake -c build virtual/kernel"
+            echo "bitbake $name && bitbake $name -c populate_sdk"
+        fi
+    fi
+done

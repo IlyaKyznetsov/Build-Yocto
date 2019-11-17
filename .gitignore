@@ -1,3 +1,4 @@
-.gitmodules
-ubuntu-yocto-build-16.04/opt
-ubuntu-yocto-build-16.04/build
+ubuntu-yocto-build-*/.*
+ubuntu-yocto-build-*/opt
+ubuntu-yocto-build-*/downloads-*
+ubuntu-yocto-build-*/build
