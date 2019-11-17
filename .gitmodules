@@ -12,3 +12,6 @@
 	url = git://git.yoctoproject.org/poky
 [submodule "ubuntu-yocto-build-16.04/layers/custom/meta-ik"]
 	url = https://github.com/IlyaKyznetsov/meta-ik.git
+[submodule "meta-ik"]
+	path = meta-ik
+	url = ../meta-ik.git
