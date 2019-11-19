@@ -2,3 +2,4 @@ ubuntu-yocto-build-*/.*
 ubuntu-yocto-build-*/opt
 ubuntu-yocto-build-*/downloads-*
 ubuntu-yocto-build-*/build
+ubuntu-yocto-build-*/ik-image*
