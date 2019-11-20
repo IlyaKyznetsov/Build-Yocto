@@ -1,17 +1,32 @@
 #!/bin/bash
 
-pullAll()
+allClonePull()
 {
-    local BRANCH=${1}
-    for item in *; do
-        if [ -d $item ]; then
-            echo "--- Repository: ${item} Branch: ${BRANCH}"
-            cd $item
+    local CURRENT_DIR="${PWD}"
+    local PATH_TO_CLONE_DIR="${1}"
+    local BRANCH="${2}"
+    local REPOSITORIES="${*:3}"
+#     echo "--- Clone/pull to: ${PATH_TO_CLONE_DIR}"
+#     echo "--- Repositories: ${REPOSITORIES[*]}"
+#     echo "--- Set branch: ${BRANCH}"
+    if [ ! -d ${PATH_TO_CLONE_DIR} ]; then
+        mkdir -p ${PATH_TO_CLONE_DIR}
+    fi
+    cd ${PATH_TO_CLONE_DIR}
+    for item in ${REPOSITORIES[*]}; do
+        echo "--- Repository: ${item} Branch: ${BRANCH}"
+        DIR="$(basename $item)"
+	[[ 'git' == "${DIR##*.}" ]] && DIR="${DIR%.*}"
+        if [ ! -d ${DIR} ]; then
+            git clone -b ${BRANCH} $item
+        else
+            cd $DIR
             git checkout ${BRANCH}
             git pull
             cd ..
         fi
     done
+    cd "${CURRENT_DIR}"
 }
 
 if [ 1 -ne $# ]; then
@@ -25,30 +40,5 @@ fi
 REPOSITORIES_INTERNET=('git://git.yoctoproject.org/poky' 'git://git.openembedded.org/meta-openembedded' 'git://github.com/meta-qt5/meta-qt5.git' 'https://git.yoctoproject.org/git/meta-freescale')
 REPOSITORIES_CUSTOM=('https://github.com/IlyaKyznetsov/meta-ik.git')
 
-DIR='internet'
-if [ ! -d ${DIR} ]; then
-    mkdir ${DIR}
-    cd ${DIR}
-    for item in ${REPOSITORIES_INTERNET[*]}; do
-        git clone -b ${BRANCH} $item
-    done
-    cd ..
-else
-    cd ${DIR}
-    pullAll ${BRANCH}
-    cd ..
-fi
-
-DIR='custom'
-if [ ! -d ${DIR} ]; then
-    mkdir ${DIR}
-    cd ${DIR}
-    for item in ${REPOSITORIES_CUSTOM[*]}; do
-        git clone -b ${BRANCH} $item
-    done
-    cd ..
-else
-    cd ${DIR}
-    pullAll ${BRANCH}
-    cd ..
-fi
+allClonePull 'internet' ${BRANCH} ${REPOSITORIES_INTERNET[*]}
+allClonePull 'custom' ${BRANCH} ${REPOSITORIES_CUSTOM[*]}
