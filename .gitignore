@@ -1,5 +1,6 @@
-ubuntu-*-build-*/.*
-ubuntu-*-build-*/opt
-ubuntu-*-build-*/downloads-*
-ubuntu-*-build-*/build
-ubuntu-*-build-*/ik-image*
+ubuntu-aosp-build-*
+ubuntu-yocto-build-*/.*
+ubuntu-yocto-build-*/opt
+ubuntu-yocto-build-*/downloads-*
+ubuntu-yocto-build-*/build
+ubuntu-yocto-build-*/ik-image*
