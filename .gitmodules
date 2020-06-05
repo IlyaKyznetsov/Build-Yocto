@@ -28,3 +28,6 @@
 [submodule "ubuntu-yocto-build-19.04/layers/internet/meta-freescale"]
 	path = ubuntu-yocto-build-19.04/layers/internet/meta-freescale
 	url = https://git.yoctoproject.org/git/meta-freescale
+[submodule "ubuntu-yocto-build-16.04/layers/internet/meta-xilinx"]
+	path = ubuntu-yocto-build-16.04/layers/internet/meta-xilinx
+	url = git://git.yoctoproject.org/meta-xilinx

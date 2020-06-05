@@ -19,6 +19,7 @@ FROM ubuntu:16.04
 RUN apt-get update && apt-get -y install gawk wget git-core diffstat unzip texinfo gcc-multilib \
      build-essential chrpath socat cpio python python3 python3-pip python3-pexpect python3-git python3-jinja2 libegl1-mesa \
      xz-utils debianutils iputils-ping libsdl1.2-dev xterm tar locales \
+     python3-gi python3-click python3-gi-cairo python3-cairo gir1.2-gtk-3.0 pkg-config libcairo2-dev gcc python3-dev libgirepository1.0-dev \
      vim-tiny mc
 
 # By default, Ubuntu uses dash as an alias for sh. Dash does not support the source command
