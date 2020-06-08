@@ -1,4 +1,5 @@
 images
+ubuntu-yocto-build-*/qemu*
 ubuntu-yocto-build-*/test*
 ubuntu-yocto-build-*/imx53*
 ubuntu-yocto-build-*/zynq7*
