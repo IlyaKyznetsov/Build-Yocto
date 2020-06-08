@@ -4,7 +4,7 @@ CONTAINER_USER='build'
 CURRENT_DIR="$(dirname $(readlink -f $0))"
 BIN='docker'
 #BIN='podman'
-RAM_MEMORY='6144m'
+RAM_MEMORY='10240m'
 CPU_CORES='1,2,3'
 CONTAINER_USER_LOCAL_HOME="$CURRENT_DIR/../${CONTAINER_NAME}"
 if [ ! -d "${CONTAINER_USER_LOCAL_HOME}" ]; then
