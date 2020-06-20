@@ -19,7 +19,7 @@ if [ 'sumo' = ${BRANCH} ]; then
 elif [ 'zeus'  = ${BRANCH} ]; then
     POKY_SDK_PATH="${POKY_SDK_PATH}/3.0"
 elif [ 'dunfell'  = ${BRANCH} ]; then
-    POKY_SDK_PATH="${POKY_SDK_PATH}/3.1"
+    POKY_SDK_PATH="${POKY_SDK_PATH}/3.1.1"
 fi
 RECIPES_IK_DIR="${RECIPES_IK_DIR}/${BRANCH}/images"
 
@@ -29,8 +29,10 @@ source syncAll.sh ${BRANCH}
 
 cd "${CURRENT_DIR}"
 echo "--- Prepare build workspace ---"
-echo "source $POKY_SDK_PATH/environment-setup-x86_64-pokysdk-linux"
-echo "source /home/build/layers/internet/poky/oe-init-build-env ${2}"
+#echo "source $POKY_SDK_PATH/environment-setup-x86_64-pokysdk-linux"
+echo ". $POKY_SDK_PATH/environment-setup-x86_64-pokysdk-linux"
+#echo "source /home/build/layers/internet/poky/oe-init-build-env ${2}"
+echo ". /home/build/layers/internet/poky/oe-init-build-env ${2}"
 
 cd "${RECIPES_IK_DIR}"
 for layers in *; do

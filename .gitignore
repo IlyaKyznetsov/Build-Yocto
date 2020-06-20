@@ -1,8 +1,8 @@
 images
 ubuntu-yocto-build-*/qemu*
 ubuntu-yocto-build-*/test*
-ubuntu-yocto-build-*/imx53*
-ubuntu-yocto-build-*/zynq7*
+ubuntu-yocto-build-*/imx*
+ubuntu-yocto-build-*/zynq*
 ubuntu-aosp-build-*
 ubuntu-yocto-build-*/.*
 ubuntu-yocto-build-*/opt

@@ -13,64 +13,64 @@
 # Use Ubuntu 18.04 LTS as the basis for the Docker image.
 FROM ubuntu:18.04
 
+ARG USER_NAME=build
+ARG host_uid=1001
+ARG host_gid=1001
+
 # Install all the Linux packages required for Yocto builds. Note that the packages python3,
 # tar, locales and cpio are not listed in the official Yocto documentation. The build, however,
 # without them.
-RUN apt-get update && apt-get -y install gawk wget git-core diffstat unzip texinfo gcc-multilib \
-     build-essential chrpath socat cpio python python3 python3-pip python3-pexpect python3-git python3-jinja2 libegl1-mesa \
-     xz-utils debianutils iputils-ping libsdl1.2-dev xterm tar locales \
-     python3-gi python3-click python3-gi-cairo python3-cairo gir1.2-gtk-3.0 pkg-config libcairo2-dev gcc python3-dev libgirepository1.0-dev \
-     vim-tiny mc
 
-# By default, Ubuntu uses dash as an alias for sh. Dash does not support the source command
-# needed for setting up the build environment in CMD. Use bash as an alias for sh.
-RUN rm /bin/sh && ln -s bash /bin/sh
-RUN ln -s /usr/bin/vim.tiny /usr/bin/vim
-
-# Set the locale to en_US.UTF-8, because the Yocto build fails without any locale set.
-RUN locale-gen en_US.UTF-8 && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        gawk \
+        wget \
+        git-core \
+        subversion \
+        diffstat \
+        unzip \
+        sysstat \
+        texinfo \
+        gcc-multilib \
+        g++-multilib \
+        build-essential \
+        chrpath \
+        socat \
+        python \
+        python3 \
+        python3-pip \
+        xz-utils  \
+        locales \
+        cpio \
+        screen \
+        tmux \
+        sudo \
+        iputils-ping \
+        iproute2 \
+        fluxbox \
+        tightvncserver \
+        xterm vim-tiny mc bmap-tools && \
+#	libgirepository1.0-dev gcc libcairo2-dev pkg-config python3-dev gir1.2-gtk-3.0 python3-gi python3-gi-cairo && \
+#	python3-git \
+#	libgirepository1.0-dev gcc libcairo2-dev pkg-config python3-dev gir1.2-gtk-3.0 && \
+#    pip3 install pycairo && pip3 install PyGObject && \
+    cp -af /etc/skel/ /etc/vncskel/ && \
+    echo "export DISPLAY=1" >>/etc/vncskel/.bashrc && \
+    mkdir  /etc/vncskel/.vnc && \
+    echo "" | vncpasswd -f > /etc/vncskel/.vnc/passwd && \
+    chmod 0600 /etc/vncskel/.vnc/passwd && \
+    groupadd -g $host_gid $USER_NAME && useradd -g $host_gid -m -s /bin/bash -u $host_uid $USER_NAME && \
+    /usr/sbin/locale-gen en_US.UTF-8 && \
+    echo 'dash dash/sh boolean false' | debconf-set-selections && \
+    DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash && \
+	rm /bin/sh && ln -s bash /bin/sh && \
+	ln -s /usr/bin/vim.tiny /usr/bin/vim && \
+	apt-get clean
+	
+ENV PROJECT build
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
-#ENV USER_NAME build
-ARG USER_NAME=build
-ENV PROJECT build
-
-# The running container writes all the build artefacts to a host directory (outside the container).
-# The container can only write files to host directories, if it uses the same user ID and
-# group ID owning the host directories. The host_uid and group_uid are passed to the docker build
-# command with the --build-arg option. By default, they are both 1001. The docker image creates
-# a group with host_gid and a user with host_uid and adds the user to the group. The symbolic
-# name of the group and user is cuteradio.
-ARG host_uid=1001
-ARG host_gid=1001
-RUN groupadd -g $host_gid $USER_NAME && useradd -g $host_gid -m -s /bin/bash -u $host_uid $USER_NAME
-
-# Perform the Yocto build as user cuteradio (not as root).
-# NOTE: The USER command does not set the environment variable HOME.
-
-# By default, docker runs as root. However, Yocto builds should not be run as root, but as a 
-# normal user. Hence, we switch to the newly created user cuteradio.
 USER $USER_NAME
-
-# Create the directory structure for the Yocto build in the container. The lowest two directory
-# levels must be the same as on the host.
-#ENV BUILD_INPUT_DIR /home/$USER_NAME/yocto/input
-#ENV BUILD_OUTPUT_DIR /home/$USER_NAME/yocto/output
-#RUN mkdir -p $BUILD_INPUT_DIR $BUILD_OUTPUT_DIR
-
-# Clone the repositories of the meta layers into the directory $BUILD_INPUT_DIR/sources/cuteradio.
-#WORKDIR $BUILD_INPUT_DIR
-#RUN git clone --recurse-submodules https://github.com/bstubert/$PROJECT.git
-
-# Prepare Yocto's build environment. If TEMPLATECONF is set, the script oe-init-build-env will
-# install the customised files bblayers.conf and local.conf. This script initialises the Yocto
-# build environment. The bitbake command builds the rootfs for our embedded device.
-#WORKDIR $BUILD_OUTPUT_DIR
-#ENV TEMPLATECONF=$BUILD_INPUT_DIR/$PROJECT/sources/meta-$PROJECT/custom
-#CMD source $BUILD_INPUT_DIR/$PROJECT/sources/poky/oe-init-build-env build \
-#    && bitbake $PROJECT-image
-
-# Make /home/build the working directory 
 WORKDIR /home/$USER_NAME
 
